@@ -14,8 +14,8 @@ spec:
         run.googleapis.com/execution-environment: gen2
         run.googleapis.com/default-url-disabled: 'true'
 #         TODO: change for your own vpc name
-#        run.googleapis.com/network-interfaces: '[{"network":"cnsrun-app", "subnetwork":"cnsrun-ndd-cloudnative"}]'
-#        run.googleapis.com/vpc-access-egress: all-traffic
+        run.googleapis.com/network-interfaces: '[{"network":"cnsrun-app", "subnetwork":"cnsrun-ndd-cloudnative"}]'
+        run.googleapis.com/vpc-access-egress: all-traffic
     spec:
       containerConcurrency: 10
       timeoutSeconds: 300
@@ -24,7 +24,7 @@ spec:
       - image: frontend
         env:
           - name: BACKEND_FQDN
-            value: "https://cnsrun-backend-noejq743xa-an.a.run.app" # FIXME: Change BACKEND_FQDN value after backend resources is created
+            value: "https://cnsrun-backend-6yq6gqqelq-an.a.run.app" # FIXME: Change BACKEND_FQDN value after backend resources is created
         ports:
         - name: http1
           containerPort: 8080
